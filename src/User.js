@@ -1,8 +1,8 @@
-import React from 'react'
+
 
 function User(){
    return (
-    <div>user component</div>
+    <div>user component app</div>
    )
 }
 export default User;
