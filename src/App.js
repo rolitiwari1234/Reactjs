@@ -1,26 +1,19 @@
-import React ,{Component} from 'react'
+
 import logo from './logo.svg';
 import './App.css';
+import Student from './Student'
 
 
-class App extends Component{
-
-  constructor(){
-    super();
-    this.state={
-      data :1
-    }
-  }
-  apple(){
-    this.setState({data:this.state.data+1})
-  }
-render (){
+function App(){
+ 
 return (
     <div className="App">
-     <h1>{this.state.data}</h1>
-     <button onClick={()=>this.apple()}>update button</button>
-    </div>
-  );
-}
-}
+     <h1>class component</h1>
+    <Student name = {"yashi"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'000'}}/>
+     <Student name = {"roli"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'555'}}/>
+    <Student name = {"ragini"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'777'}}/> 
+    </div>)
+};
+
+
 export default App;
