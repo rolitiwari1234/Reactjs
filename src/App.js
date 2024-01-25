@@ -18,7 +18,7 @@ render (){
 return (
     <div className="App">
      <h1>{this.state.data}</h1>
-     <button onClick={()=>this.apple()}>click me</button>
+     <button onClick={()=>this.apple()}>update button</button>
     </div>
   );
 }
