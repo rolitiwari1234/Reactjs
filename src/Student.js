@@ -1,12 +1,13 @@
-function Student(props)
-{
-    console.log(props)
-    return(
-        <div style = {{backgroundColor:"skyblue",margin:10}}>
-             <h1> hello  {props.name}</h1>
-            {/* <h1> email:  {props.email}</h1> */}
-            {/* <h4>address :{props.other.address}</h4>  */}
-        </div>
-    )
+import React from 'react'
+
+export default class Student extends React.Component{
+    render(){
+        console.log(this.props)
+        return(
+            <div style = {{backgroundColor:"Highlight",margin:"10"}}>
+                <h1>students  {this.props.name}</h1>
+                <h3>{this.props.email}</h3>
+                </div>
+        )
+    }
 }
-export default Student;
