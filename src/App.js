@@ -1,17 +1,17 @@
-
+import React,{useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
 import Student from './Student'
 
 
 function App(){
- 
+ const [name,setName]=useState("anil")
 return (
     <div className="App">
      <h1>class component</h1>
-    <Student name = {"yashi"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'000'}}/>
-     <Student name = {"roli"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'555'}}/>
-    <Student name = {"ragini"} email = "roli@gmail.com" other = {{address:'mainpuri',mobile:'777'}}/> 
+    <Student name = {name} />
+    <button onClick = {()=>{setName("siddu")}}>update data</button>
+     
     </div>)
 };
 
