@@ -2,26 +2,17 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react'
+import Cycle from './Cycle';
 
-class App extends React.Component{
-    constructor()
-
-    {
-        super();
-        this.state = {
-            data : "yashi"
-        }
-    }
-    render(){
-        
-
-        return(
-            <div>
-                <h1>hello world {this.state.data}</h1>
-            </div>
-        )
-    }
-}
-
-
-export default App;
+function App(){
+    const [name,setName] = React.useState("yashi")
+    return(
+    <div>
+        <h1> Render method in react</h1>
+        <Cycle />
+        {/* <button onClick={()=>setName("roli")}>update name</button> */}
+    </div>
+)
+}  
+    
+ export default App;
