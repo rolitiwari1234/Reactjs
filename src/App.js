@@ -2,32 +2,25 @@
 
 import './App.css';
 import React from 'react'
-
+import Unmount from './Unmount';
 class App extends React.Component{
- constructor(){
-  super();
-  this.state = {
-    count :0
+
+  constructor(){
+    super();
+    this.state = {
+      show:true
+    }
   }
-}
-shouldComponentUpdate(){
-  console.warn("shouldComponentUpdate",this.state.count)
-  if(this.state.count > 5 && this.state.count < 10)
-  {
-    return true;
-  }
-  
-  }
-  
-render(){
-   return(
+  render(){
+  return(
    <div className='App'>
-   <h2> should component  update {this.state.count} </h2>
-   <button onClick={()=>{this.setState({ count:this.state.count+1})}}>update name</button>
+    {
+   this.state.show ?<Unmount /> :<h1>child component removed</h1>
+    }
+   <button onClick={()=>this.setState({show:!this.state.show})}>toggle child component</button>
    </div>
     )
-    
-   
    }
   }
+   
  export default App;
