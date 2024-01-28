@@ -1,31 +1,33 @@
 
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react'
 
 class App extends React.Component{
-
-    constructor(){
-        super();
-        this.state = {
-            name:"roli"
-        }
-        console.warn("constructor")
-    }
-
-    componentDidMount(){
-        console.warn("componentDidMount")
-    }
-    render()
-    { 
-        console.warn("render")       
-    return(
-    <div className = "App">
-        <h1>component did mount {this.state.name}</h1>
-        <button onClick={()=>{this.setState({name:"yashi"})}}>update name</button>
-        
-    </div>
-)
-}  
-} 
+ constructor(){
+  super();
+  this.state = {
+    count :0
+  }
+}
+shouldComponentUpdate(){
+  console.warn("shouldComponentUpdate",this.state.count)
+  if(this.state.count > 5 && this.state.count < 10)
+  {
+    return true;
+  }
+  
+  }
+  
+render(){
+   return(
+   <div className='App'>
+   <h2> should component  update {this.state.count} </h2>
+   <button onClick={()=>{this.setState({ count:this.state.count+1})}}>update name</button>
+   </div>
+    )
+    
+   
+   }
+  }
  export default App;
