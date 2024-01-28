@@ -12,7 +12,7 @@ class Cycle extends React.Component{
     {
         console.warn("cycle rendering",this.state.email)
         return(
-            <div>
+            <div className='App'>
                 <h1> user component </h1>
                 <button onClick={()=>this.setState({email:"yashi@gmail.com"})}>update email</button>
             </div>

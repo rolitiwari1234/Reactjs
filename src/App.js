@@ -2,17 +2,30 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react'
-import Cycle from './Cycle';
 
-function App(){
-    const [name,setName] = React.useState("yashi")
+class App extends React.Component{
+
+    constructor(){
+        super();
+        this.state = {
+            name:"roli"
+        }
+        console.warn("constructor")
+    }
+
+    componentDidMount(){
+        console.warn("componentDidMount")
+    }
+    render()
+    { 
+        console.warn("render")       
     return(
-    <div>
-        <h1> Render method in react</h1>
-        <Cycle />
-        {/* <button onClick={()=>setName("roli")}>update name</button> */}
+    <div className = "App">
+        <h1>component did mount {this.state.name}</h1>
+        <button onClick={()=>{this.setState({name:"yashi"})}}>update name</button>
+        
     </div>
 )
 }  
-    
+} 
  export default App;
