@@ -1,26 +1,19 @@
 
 
 import './App.css';
-import React from 'react'
-import Unmount from './Unmount';
-class App extends React.Component{
+import React, { useState,useEffect } from 'react'
 
-  constructor(){
-    super();
-    this.state = {
-      show:true
-    }
-  }
-  render(){
+function App (){
+  const[data,setData] = useState("Roli")
+
+
   return(
    <div className='App'>
-    {
-   this.state.show ?<Unmount /> :<h1>child component removed</h1>
-    }
-   <button onClick={()=>this.setState({show:!this.state.show})}>toggle child component</button>
+    <h1>{data} !</h1>
+    <button onClick={()=>setData("tiwari")}>update hook</button>
    </div>
     )
-   }
   }
+  
    
  export default App;
