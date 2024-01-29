@@ -4,13 +4,16 @@ import './App.css';
 import React, { useState,useEffect } from 'react'
 
 function App (){
-  const[data,setData] = useState("Roli")
-
+  const[count,setCount] = useState(0)
+   useEffect(()=>{
+    console.warn("useEffect")
+   })
+   
 
   return(
    <div className='App'>
-    <h1>{data} !</h1>
-    <button onClick={()=>setData("tiwari")}>update hook</button>
+    <h1>useEffect in react {count}</h1>
+    <button onClick={()=>setCount(count+1)}>update counter</button>
    </div>
     )
   }
