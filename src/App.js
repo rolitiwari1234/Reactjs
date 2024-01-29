@@ -1,22 +1,19 @@
-
-import Users from './Users'
+import React from 'react'
 import './App.css';
-import React, { useState,useEffect } from 'react'
-
+import './style.css'
+import style from './custom.module.css'
 function App (){
-  const[data,setData]=useState(10)
-  const [count,setCount] =useState(100)
   
    
   return(
    <div className='App'>
-   
-     <Users count = {count} data = {data} /> 
-    <button onClick={()=>setCount(count+1)}>update count</button>
-    <button onClick={()=>setData(data+1)}>update data</button>
+   <h1 className='prime'>style 1 in react js</h1>
+    <h1 style = {{backgroundColor:"red",color:"blue"}} >style 1 in react js</h1> 
+    <h1 className = {style.h1}>style 1 in react js</h1>
    </div>
     )
   }
   
    
  export default App;
+ 
